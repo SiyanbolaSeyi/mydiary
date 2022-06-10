@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+<div class="create-entry content">
+    <form action="/diarylist" method="POST">
+        <label for="title">Diary Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="snippet">Diary Snippet</label>
+        <input type="text" id="snippet" name="snippet" required>
+        <label for="body">Diary Body:</label>
+        <textarea id="body" name="body" required></textarea>
+        <button>Submit</button>
+    </form>
+</div>
+
+<%- include('partials/footer'); -%>

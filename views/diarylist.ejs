@@ -1,0 +1,24 @@
+<%- include('partials/header'); -%>
+
+<nav>
+    <ul>
+        <li><a href="diarylist/newentry">New Entry</a></li>
+    </ul>
+</nav>
+
+<div class="diary content">
+    <h2>All Contents</h2>
+    <% if (diarylist.length > 0) { %>
+        <% diarylist.forEach(diary => { %>
+            <a class="single" href="/diarylist/<%= diary._id %>">
+                <h3 class="title"><%= diary.title %></h3>
+                <p class="snippet"><%= diary.snippet %></p>
+            </a>
+        <%}) %>
+    <%} else { %>
+        <p>There are no blogs to display...</p>
+    <% } %>
+   
+</div>
+
+<%- include('partials/footer'); -%>
